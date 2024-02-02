@@ -3,8 +3,12 @@
    "version": "1.0.0",
    "description": "",
    "main": "index.js",
+   "engines":{
+      "node":"14.x"
+
+   },
    "scripts": {
-      "start": "ts-node-dev --respawn --transpile-only --exit-child src/app.ts",
+      "start": "node src/app.ts",
       "build": "tsc -p .",
       "typeorm": "typeorm-ts-node-commonjs",
       "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run -d ./src/data-source.ts",
