@@ -5,7 +5,7 @@
         
             {
               "src": "/api/healthChecker", 
-              "dest": "src/app.ts" 
+              "dest": "./app.ts" 
             }
             
     
