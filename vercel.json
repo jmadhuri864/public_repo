@@ -2,14 +2,27 @@
     "version": 2,
     "builds": [
       {
-        "src": "/src/app.ts",
+        "src": "./src/app.ts", 
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "/"
+        "src": "/api/auth/(.*)", 
+        "dest": "/api/auth/$1" 
+      },
+      {
+        "src": "/api/users/(.*)", 
+        "dest": "/api/users/$1" 
+      },
+      {
+        "src": "/api/healthChecker",
+        "dest": "/api/healthChecker" 
+      },
+      {
+        "src": "/(.*)", 
+        "dest": "/src/app.js" 
       }
     ]
   }
+  

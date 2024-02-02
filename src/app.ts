@@ -11,6 +11,7 @@ import userRouter from './routes/user.routes';
 import validateEnv from './utils/validateEnv';
 import redisClient from './utils/connectRedis';
 console.log("port no is ",process.env.port);
+
 AppDataSource.initialize()
   .then(async () => {
     // VALIDATE ENV
@@ -77,4 +78,6 @@ AppDataSource.initialize()
     console.log(`Server started on port: ${port}`);
   })
   .catch((error) => console.log(error));
+
+  
 
