@@ -10,6 +10,7 @@
    "scripts": {
       "start": "node src/app.ts",
       "build": "tsc -p .",
+      "vercel-build":"echo hello",
       "typeorm": "typeorm-ts-node-commonjs",
       "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run -d ./src/data-source.ts",
       "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert -d ./src/data-source.ts",
